@@ -171,7 +171,7 @@ title = title
 audio =/<a.+?href="(.+?)"/.exec(res.result)[1],
 thumb = thumb
 filesize = filesize
-hasul.push({title,audio,thumb,filesize})
+hasil.push({title,audio,thumb,filesize})
 resolve({hasil})
 console.log(hasil)
 }).catch(reject)
