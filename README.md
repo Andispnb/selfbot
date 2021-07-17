@@ -1,4 +1,4 @@
-## 😎Ivanzz-wabot
+## Self-bot
 
 Simple WhatsApp Bot
 
