@@ -73,7 +73,7 @@ const jam = moment.tz('Asia/Jakarta').format('HH:mm')
 isPublic = false
 isOff = true
 isAntidelete = false
-prefix = '.'
+prefix = '#'
 alasan = ''
 charging = ''
 battrei = ''
@@ -571,7 +571,7 @@ res = await vanz.prepareMessageFromContent(from,{
 "surface":'CATALOG',
 "message": menu,
 "thumbnail": thumb,
-"orderTitle": 'Ivanzx',
+"orderTitle": 'SPNb',
 "sellerJid": '0@s.whatsapp.net',
 "token": 'AR5wc3iY2NY8yJaK9MMXdlK/aguUxoA8yPtSFcvt0lrE5g=='
 }
