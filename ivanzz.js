@@ -85,7 +85,7 @@ blocking = []
 
 
 //FUNCTION DATE
-var ucapan = ''
+var ucapan = 'Hay Spnb'
  if (jam >= '04:00' && jam <= '06:00') {
  ucapanW = 'Subuh!'
  } else if (jam >= '06:00' && jam <= '10:00') {
