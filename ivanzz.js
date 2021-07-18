@@ -272,9 +272,9 @@ const command = body.replace(prefix, '').trim().split(/ +/).shift().toLowerCase(
 const args = body.trim().split(/ +/).slice(1)
 const isCmd = body.startsWith(prefix)
 mess = {
-wait: '⏳Wait sedang di prosess⏳',',
-sukses: 'Sukses Bosku !!',
-error: 'Error!'
+wait: '*⏳Wait sedang di prosess⏳*',
+sukses: '*Sukses Bosku !!*',
+error: '*Error!!*'
 }
 const ownerNumber = '62895386763040@s.whatsapp.net'
 const isGroup = from.endsWith('@g.us')
