@@ -272,11 +272,11 @@ const command = body.replace(prefix, '').trim().split(/ +/).shift().toLowerCase(
 const args = body.trim().split(/ +/).slice(1)
 const isCmd = body.startsWith(prefix)
 mess = {
-wait: 'Tunggu, Sedang Diproses...',
-sukses: 'Sukses !!',
+wait: '⏳Wait sedang di prosess⏳',',
+sukses: 'Sukses Bosku !!',
 error: 'Error!'
 }
-const ownerNumber = '628812904283@s.whatsapp.net'
+const ownerNumber = '62895386763040@s.whatsapp.net'
 const isGroup = from.endsWith('@g.us')
 const sender = isGroup ? vnz.sender : vnz.key.remoteJid
 const totalchat = await vanz.chats.all()
