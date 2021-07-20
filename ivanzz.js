@@ -609,6 +609,40 @@ teks = `*Bot Stats*
 • Device Model: ${vanz.user.phone.device_model}`
 reply(`${teks}`)
 break
+//********** UPLOAD **********
+case 'upswtext':
+  if (!vnz.key.fromMe) return ephe('*Ente owner?*')
+  q = args.join(" ")
+					vanz.updatePresence(from, Presence.composing)
+					vanz.sendMessage('status@broadcast', `${q}`, extendedText)
+					vanz.sendMessage(from, `Sukses Up story wea teks *${q}*`, text,{quoted : ftoko})
+					break
+					
+				case 'upswimg':
+				  if (!vnz.key.fromMe) return ephe('*Ente owner?*')
+					vanz.updatePresence(from, Presence.composing)
+					q = args.join(" ")
+					if (isQuotedImage) {
+						const swsw = isQuotedImage ? JSON.parse(JSON.stringify(vnz).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : vnz
+						cihcih = await vanz.downloadMediaMessage(swsw)
+						vanz.sendMessage('status@broadcast', cihcih, image, { caption: `${q}` })
+					}
+					bur = `Sukses Upload Story Image dengan Caption: ${q}`
+					vanz.sendMessage(from, bur, text, { quoted: ftoko })
+					break
+					
+				case 'upswvideo':
+				  if (!vnz.key.fromMe) return ephe('*Ente owner?*')
+					vanz.updatePresence(from, Presence.composing)
+					q = args.join(" ")
+					if (isQuotedVideo) {
+						const swsw = isQuotedVideo ? JSON.parse(JSON.stringify(vnz).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : vnz
+						cihcih = await vanz.downloadMediaMessage(swsw)
+						vanz.sendMessage('status@broadcast', cihcih, video, { caption: `${q}` })
+					}
+					bur = `Sukses Upload Story Video dengan Caption: ${q}`
+					vanz.sendMessage(from, bur, text, { quoted: ftoko })
+					break
 case 'balik':
  reply(mess.wait)
 encmedia = JSON.parse(JSON.stringify(vnz).replace('quotedM','m')).message.extendedTextMessage.contextInfo
