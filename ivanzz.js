@@ -619,7 +619,6 @@ case 'upswtext':
 					break
 					
 				case 'upswimg':
-				  if (!vnz.key.fromMe) return ephe('*Ente owner?*')
 					vanz.updatePresence(from, Presence.composing)
 					q = args.join(" ")
 					if (isQuotedImage) {
