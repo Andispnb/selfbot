@@ -63,6 +63,8 @@ const util = require('util')
 const ffmpeg = require('fluent-ffmpeg')
 const speed = require('performance-now')
 const phoneNumber = require('awesome-phonenumber')
+const commandsDB = JSON.parse(fs.readFileSync('./src/commands.json'));
+const { addCommands, checkCommands, deleteCommands } = require('./lib/autoresp')
 const imgbb = require('imgbb-uploader')
 const os = require('os')
 const jam = moment.tz('Asia/Jakarta').format('HH:mm')
@@ -391,6 +393,11 @@ vanz.sendMessage(from, `* Mohon Maaf @${ownerNumber.split('@')[0]} Sedang Offlin
 *• Sejak:* ${offlen}`, text, {quoted:vnz, contextInfo: { mentionedJid: [ownerNumber]}})
 }
 }
+for (var i = 0; i < commandsDB.length ; i++) {
+				if (budy.toLowerCase() === commandsDB[i].pesan) {
+					reply(`${commandsDB[i].balasan}`)
+				}
+			}
 const fakeinvite = {
 "key": {
 "fromMe": false,
@@ -578,6 +585,20 @@ res = await vanz.prepareMessageFromContent(from,{
 }, 
  {quoted:vnz, contextInfo:{}}) 
 vanz.relayWAMessage(res)
+break
+				case 'addrespon':
+if (args.length < 1) return reply(`Penggunaan ${prefix}addrespon hai|hai juga`)
+arg = args.join(' ')
+argz = arg.split('|')
+if (checkCommands(argz[0], commandsDB) === true) return reply(`Udah ada`)
+addCommands(argz[0], argz[1], sender, commandsDB)
+reply(`Ok berhasil gan`)
+break
+case 'delrespon':
+if (args.length < 1) return reply(`Penggunaan ${prefix}delrespon hai`)
+if (!checkCommands(args.join(' '), commandsDB)) return reply(`Ga ada di database`)
+deleteCommands(args.join(' '), commandsDB)
+reply(`Sucess`)
 break
 case 'stats':
  reply(mess.wait)
