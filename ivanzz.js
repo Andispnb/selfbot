@@ -63,13 +63,12 @@ const util = require('util')
 const ffmpeg = require('fluent-ffmpeg')
 const speed = require('performance-now')
 const phoneNumber = require('awesome-phonenumber')
-const commandsDB = JSON.parse(fs.readFileSync('.data/src/commands.json'));
-const { addCommands, checkCommands, deleteCommands } = require('.data/js/autoresp')
 const imgbb = require('imgbb-uploader')
 const os = require('os')
 const jam = moment.tz('Asia/Jakarta').format('HH:mm')
 //END MODULE
-
+const commandsDB = JSON.parse(fs.readFileSync('.data/src/commands.json'));
+const { addCommands, checkCommands, deleteCommands } = require('.data/js/autoresp')
 
 //METADATA
 isPublic = false
