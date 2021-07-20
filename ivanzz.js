@@ -786,7 +786,7 @@ reply(`Sukses SendBugg`)
 }
 break
 case 'buglokasi':
-vanz.sendMessage(from, {degreesLatitude: 24.121231, degreesLongitude: 55.1121221, name:'Troli By Ivanzz',address:'Puntenn !!'}, MessageType.location, {quoted:BugTroli})
+vanz.sendMessage(from, {degreesLatitude: 24.121231, degreesLongitude: 55.1121221, name:'Troli By spnb',address:'Puntenn !!'}, MessageType.location, {quoted:BugTroli})
 break
 case 'sendtroli':
 hm = `${q}`
