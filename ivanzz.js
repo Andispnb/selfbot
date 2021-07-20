@@ -391,11 +391,6 @@ vanz.sendMessage(from, `* Mohon Maaf @${ownerNumber.split('@')[0]} Sedang Offlin
 *• Sejak:* ${offlen}`, text, {quoted:vnz, contextInfo: { mentionedJid: [ownerNumber]}})
 }
 }
-for (var i = 0; i < commandsDB.length ; i++) {
-				if (budy.toLowerCase() === commandsDB[i].pesan) {
-					reply(`${commandsDB[i].balasan}`)
-				}
-			}
 const fakeinvite = {
 "key": {
 "fromMe": false,
